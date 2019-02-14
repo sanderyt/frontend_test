@@ -9,7 +9,7 @@
 
 WisePops is on a mission to provide marketers with the best tool to create popups.
 
-In this exercise, we'll test your React skill by creating a simple WisePops clone.
+In this exercise, we'll test your React skills by creating a simple WisePops clone.
 
 The project is already setup in this repository so to start, fork it and when
 you are done invite @clmnt-wisepops to collaborate on it.
@@ -19,7 +19,7 @@ Don't spend more than 2 hours on this test.
 ## Steps
 
 For each step that follows you will have to edit some files already provided,
-but doesn't hesitate to go further. Also, it will be great if you split your
+but don't hesitate to go further. Also, it will be great if you split your
 steps using branches or commits.
 
 ``` sh
