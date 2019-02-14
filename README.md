@@ -28,16 +28,20 @@ yarn
 yarn start
 ```
 
-### 1. Show a static campaign on `/demo` page
+### 1. Show a static popup on `/demo` page
 
 Go to [Demo.js](src/pages/Demo.js) file and fill `render` method to show
-an overlay that contains the message stored in the first element of the
-`popups` array.
+an overlay that contains the message stored in `popup` variable.
 
 This page can be seen on http://localhost:8000/demo
 
-### 2. Fetch campaigns from a fake REST API
+### 2. Fetch popup from a fake REST API
 
-### 3. Show a list of campaigns on `/dashboard` page
+Go to [popup.js](/src/lib/popup.js) file and replace `getPopup` function
+body to fetch popup definition from http://localhost:8001/popup instead.
 
-### 4. Create a campaign on `/popups/create` page
+This will imply some change on `Demo` component too.
+
+### 3. Edit the popup on `/popup` page
+
+### 4. Only show the popup on first visit

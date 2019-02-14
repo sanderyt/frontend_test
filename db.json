@@ -1,8 +1,6 @@
 {
-  "popups": [
-    {
-      "id": 0,
-      "message": "Hello, World!"
-    }
-  ]
+  "popup": {
+    "id": 0,
+    "message": "Hello, World!"
+  }
 }

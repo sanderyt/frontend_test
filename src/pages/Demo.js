@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 
-import { getPopups } from '../lib/popup'
+import { getPopup } from '../lib/popup'
 
 import './Demo.css'
 
 export class Demo extends Component {
   render() {
-    const popups = getPopups()
+    const popup = getPopup()
 
     /**
-     * Step 1: Render the first popup of popups array in an overlay
+     * Step 1: Render popup message in an overlay
      */
     return <div />
   }
