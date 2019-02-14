@@ -44,4 +44,9 @@ This will imply some change on `Demo` component too.
 
 ### 3. Edit the popup on `/popup` page
 
+Go to [Popup.js](/src/pages/Popup.js) file and fill `Popup` component to
+be able to edit a Popup definition. For information we use
+[json-server](https://github.com/typicode/json-server) as a fake API server
+so you will be able to persist change on this API.
+
 ### 4. Only show the popup on first visit
