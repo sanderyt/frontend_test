@@ -50,3 +50,8 @@ be able to edit a Popup definition. For information we use
 so you will be able to persist change on this API.
 
 ### 4. Only show the popup on first visit
+
+On a real use case, we don't want to show the popup each time a user visit
+the page so adapts the code to show the popup only on the first visit.
+
+For this one you are free to implement it the way you want.
