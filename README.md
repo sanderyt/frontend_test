@@ -51,9 +51,14 @@ be able to edit a Popup definition. For information we use
 [json-server](https://github.com/typicode/json-server) as a fake API server
 so you will be able to persist change on this API.
 
-### 4. Only show the popup on first visit
+### 4. Only show the popup on a specific situation
 
 On a real use case, we don't want to show the popup each time a user visit
-the page so adapts the code to show the popup only on the first visit.
+the page so adapts the code to show the popup only on these conditions:
+
+* first visit
+* visitor is using a mobile
+* visitor speak English
+* visitor is in France
 
 For this one you are free to implement it the way you want.
