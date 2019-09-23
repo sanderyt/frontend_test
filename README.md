@@ -12,15 +12,18 @@ WisePops is on a mission to provide marketers with the best tool to create popup
 In this exercise, we'll test your React skills by creating a simple WisePops clone.
 
 The project is already setup in this repository so to start, fork it and when
-you are done invite @clmnt-wisepops to collaborate on it.
+you are done invite @clmntgr and @boris-hocde to collaborate on it.
 
-Don't spend more than 2 hours on this test.
+Don't spend more than 4 hours on this test.
 
 ## Steps
 
 For each step that follows you will have to edit some files already provided,
 but don't hesitate to go further. Also, it will be great if you split your
 steps using branches or commits.
+
+Don't hesitate to over-engineer the problem a bit, so we will be able to see
+how you will work, split and organize your file on a real project.
 
 ``` sh
 # Install dependencies
@@ -56,9 +59,31 @@ so you will be able to persist change on this API.
 On a real use case, we don't want to show the popup each time a user visit
 the page so adapts the code to show the popup only on these conditions:
 
-* first visit
-* visitor is using a mobile
-* visitor speak English
-* visitor is in France
+* First visit
+* Visitor is using a mobile
+* Visitor speak English
+* Visitor is in France
 
 For this one you are free to implement it the way you want.
+
+### 5. Create an UMD bundle to distribute demo script on the web
+
+Use [webpack](https://webpack.js.org/) to create an UMD bundle so we should
+be able to load the demo script like that:
+
+``` js
+(function () {
+  const scriptElement = document.createElement("script");
+  scriptElement.src = "http://localhost:8000/demo.js";
+  scriptElement.onload = function () {
+    WisePops.start();
+  };
+  document.body.appendChild(scriptElement);
+})()
+```
+
+For this step you will need to:
+
+- Add a webpack configuration
+- Create a `demo.js` file that will be the entry point of the webpack configuration
+- Add a webserver to serve `demo.js`
