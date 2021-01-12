@@ -12,7 +12,7 @@ WisePops is on a mission to provide marketers with the best tool to create popup
 In this exercise, we'll test your React skills by creating a simple WisePops clone.
 
 The project is already setup in this repository so to start, fork it and when
-you are done invite @clmntgr and @boris-hocde to collaborate on it.
+you are done invite @clmntgr, @boris-hocde and @hmatthieu to collaborate on it.
 
 Don't spend more than 4 hours on this test.
 
