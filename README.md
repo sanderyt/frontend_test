@@ -35,21 +35,21 @@ yarn start
 
 ### 1. Show a static popup on `/demo` page
 
-Go to [Demo.js](src/pages/Demo.js) file and fill `render` method to show
+Go to [Demo.tsx](src/pages/Demo.tsx) file and fill `Demo` component to show
 an overlay that contains the message stored in `popup` variable.
 
 This page can be seen on http://localhost:8000/demo
 
 ### 2. Fetch popup from a fake REST API
 
-Go to [popup.js](/src/lib/popup.js) file and replace `getPopup` function
+Go to [popup.ts](/src/lib/popup.ts) file and replace `getPopup` function
 body to fetch popup definition from http://localhost:8001/popup instead.
 
 This will imply some change on `Demo` component too.
 
 ### 3. Edit the popup on `/popup` page
 
-Go to [Popup.js](/src/pages/Popup.js) file and fill `Popup` component to
+Go to [Popup.tsx](/src/pages/Popup.tsx) file and fill `Popup` component to
 be able to edit a Popup definition. For information we use
 [json-server](https://github.com/typicode/json-server) as a fake API server
 so you will be able to persist change on this API.
@@ -85,5 +85,5 @@ be able to load the demo script like that:
 For this step you will need to:
 
 - Add a webpack configuration
-- Create a `demo.js` file that will be the entry point of the webpack configuration
-- Add a webserver to serve `demo.js`
+- Create a `demo.ts` file that will be the entry point of the webpack configuration
+- Add a webserver to serve the `demo.js` bundle

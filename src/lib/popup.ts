@@ -4,6 +4,6 @@ export function getPopup() {
    */
   return {
     id: 0,
-    message: 'Hello, WisePops!'
-  }
+    message: 'Hello, WisePops!',
+  };
 }
