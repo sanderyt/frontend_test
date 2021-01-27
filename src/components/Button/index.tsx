@@ -5,7 +5,7 @@ import './button.scss';
 interface ButtonProps {
   children: string;
   isPrimary: boolean;
-  clickHandler: () => void;
+  clickHandler?: () => void;
 }
 
 export const Button: FC<ButtonProps> = ({

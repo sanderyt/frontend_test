@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { postMessage } from '../../lib/popup';
+import { Popup } from '../../lib/types';
 
 import { Inputfield } from '../Inputfield';
 import { Button } from '../Button';
-import { postMessage } from '../../lib/popup';
 
 export const EditForm = () => {
   const { register, handleSubmit } = useForm();
   const [message, setMessage] = useState<String | null>(null);
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: Popup) => {
     try {
       await postMessage(data.message, 0);
       setMessage('Succesfully posted');
@@ -21,9 +22,7 @@ export const EditForm = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate>
       <Inputfield name="message" register={register} />
-      <Button clickHandler={() => console.log('hi')} isPrimary>
-        Send
-      </Button>
+      <Button isPrimary>Send</Button>
       {message && message}
     </form>
   );
