@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const isMobileDevice = () => {
   var check = false;
   (function(a) {
@@ -12,4 +14,13 @@ export const isMobileDevice = () => {
       check = true;
   })(navigator.userAgent || navigator.vendor);
   return check;
+};
+
+export const checkUserLocation = async () => {
+  try {
+    const response = await axios.get('http://ip-api.com/json');
+    return response.data.country;
+  } catch (error) {
+    console.error(error);
+  }
 };
