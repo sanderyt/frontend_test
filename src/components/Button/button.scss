@@ -1,0 +1,21 @@
+@import '../../styles/variables';
+
+.btn {
+  border: none;
+  outline: none;
+  padding: $spacing-md $spacing-l;
+  cursor: pointer;
+  border-radius: $border-radius-md;
+
+  &--primary {
+    background-color: $primary-color;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: $transition-ease;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
