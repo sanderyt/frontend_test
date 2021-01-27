@@ -19,7 +19,7 @@ export const Modal: FC<ModalProps> = ({
 }) => {
   return (
     <div className={isOpen ? 'modal modal--open' : 'modal'}>
-      <Backdrop />
+      <Backdrop clickHandler={clickHandler} />
       <div className="modal__body">
         <div className="modal__header">
           <h3>{title}</h3>
