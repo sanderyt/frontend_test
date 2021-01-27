@@ -1,9 +1,15 @@
 # WisePops Frontend Test
 
+To run the server locally:
+
+```sh
+yarn fullDev
+```
+
 ## Requirements
 
-* [Node.js](https://nodejs.org)
-* [Yarn](https://yarnpkg.com)
+- [Node.js](https://nodejs.org)
+- [Yarn](https://yarnpkg.com)
 
 ## Basics
 
@@ -25,7 +31,7 @@ steps using branches or commits.
 Don't hesitate to over-engineer the problem a bit, so we will be able to see
 how you will work, split and organize your file on a real project.
 
-``` sh
+```sh
 # Install dependencies
 yarn
 
@@ -59,10 +65,10 @@ so you will be able to persist change on this API.
 On a real use case, we don't want to show the popup each time a user visit
 the page so adapts the code to show the popup only on these conditions:
 
-* First visit
-* Visitor is using a mobile
-* Visitor speak English
-* Visitor is in France
+- First visit
+- Visitor is using a mobile
+- Visitor speak English
+- Visitor is in France
 
 For this one you are free to implement it the way you want.
 
@@ -71,15 +77,15 @@ For this one you are free to implement it the way you want.
 Use [webpack](https://webpack.js.org/) to create an UMD bundle so we should
 be able to load the demo script like that:
 
-``` js
-(function () {
-  const scriptElement = document.createElement("script");
-  scriptElement.src = "http://localhost:8000/demo.js";
-  scriptElement.onload = function () {
+```js
+(function() {
+  const scriptElement = document.createElement('script');
+  scriptElement.src = 'http://localhost:8000/demo.js';
+  scriptElement.onload = function() {
     WisePops.start();
   };
   document.body.appendChild(scriptElement);
-})()
+})();
 ```
 
 For this step you will need to:
