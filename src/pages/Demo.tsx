@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getPopup } from '../lib/popup';
 
 import { Modal } from '../components/Modal';
 
 export const Demo = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const popup = getPopup();
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function getData() {
+      const response = await getPopup();
+      setData(response.message);
+    }
+    getData();
+  }, []);
 
   const toggleModal = () => setIsOpen(!isOpen);
 
@@ -19,13 +27,15 @@ export const Demo = () => {
       <span>
         Here the modals only shows first time and the other conditions
       </span>
-      <Modal
-        title="Welcome to Wisepops"
-        isOpen={isOpen}
-        clickHandler={toggleModal}
-      >
-        {popup.message}
-      </Modal>
+      {data && (
+        <Modal
+          title="Welcome to Wisepops"
+          isOpen={isOpen}
+          clickHandler={toggleModal}
+        >
+          {data}
+        </Modal>
+      )}
     </>
   );
 };
