@@ -13,9 +13,16 @@ export const Demo = () => {
       setData(response.message);
     }
     getData();
+    showModalForUser();
   }, []);
 
   const toggleModal = () => setIsOpen(!isOpen);
+
+  const showModalForUser = async () => {
+    const firstTimeVisit = localStorage.getItem('alreadyVisited');
+
+    if (!firstTimeVisit) localStorage.setItem('alreadyVisited', 'true');
+  };
 
   /**
    * Step 1: Render popup message in an overlay
