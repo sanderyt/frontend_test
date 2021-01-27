@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getPopup } from '../lib/popup';
 
 import { Modal } from '../components/Modal';
+import { isMobileDevice } from '../lib/utils';
 
 export const Demo = () => {
   const [isOpen, setIsOpen] = useState(true);
@@ -20,6 +21,7 @@ export const Demo = () => {
 
   const showModalForUser = async () => {
     const firstTimeVisit = localStorage.getItem('alreadyVisited');
+    const isMobileUser = isMobileDevice();
 
     if (!firstTimeVisit) localStorage.setItem('alreadyVisited', 'true');
   };
