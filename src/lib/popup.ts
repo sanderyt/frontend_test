@@ -19,3 +19,12 @@ export async function getPopup() {
   //   message: 'Hello, WisePops!'
   // };
 }
+
+export async function postMessage(message: string, id: number) {
+  try {
+    const response = await axios.post(API_URL, { message, id });
+    return response.data;
+  } catch (error) {
+    console.error(error);
+  }
+}
