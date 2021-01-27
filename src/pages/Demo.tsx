@@ -10,5 +10,5 @@ export const Demo = () => {
   /**
    * Step 1: Render popup message in an overlay
    */
-  return <div />;
+  return <div>Test</div>;
 };
