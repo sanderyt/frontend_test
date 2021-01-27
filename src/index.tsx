@@ -14,4 +14,10 @@ const App = () => (
   </Router>
 );
 
-render(<App />, document.getElementById('root'));
+(window as any).WisePops = {
+  start() {
+    render(<App />, document.getElementById('root'));
+  }
+};
+
+// render(<App />, document.getElementById('root'));
