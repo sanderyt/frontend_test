@@ -1,16 +1,18 @@
+@import '../../styles/variables';
+
 .inputfield {
   display: flex;
   flex-direction: column;
-  margin: 6px;
+  margin: $spacing-base;
 
   & label {
     font-weight: bold;
   }
 
   & input {
-    padding: 6px;
-    border: 1px solid #ccc;
+    padding: $spacing-base;
+    border: $border-thin;
     outline: none;
-    border-radius: 2px;
+    border-radius: $border-radius-sm;
   }
 }
