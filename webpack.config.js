@@ -6,9 +6,7 @@ const isProd = process.env.NODE_ENV === 'production';
 
 const config = {
   mode: isProd ? 'production' : 'development',
-  entry: {
-    index: './src/index.tsx'
-  },
+  entry: './src/index.tsx',
   output: {
     filename: 'demo.js',
     library: 'wisepops',
