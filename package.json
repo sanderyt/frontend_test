@@ -8,7 +8,8 @@
     "format": "prettier --write \"src/**/*.{js,jsx,json,md,ts,tsx,css}\"",
     "dev": "cross-env NODE_ENV=development webpack serve --open --color --progress",
     "build": "cross-env NODE_ENV=production webpack --color --progress",
-    "fullDev": "run-p start:back dev"
+    "fullDev": "run-p start:back dev",
+    "test:bundle": "serve index.html"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

@@ -31,7 +31,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Babel + TypeScript + React = ❤️',
-      template: './index.html'
+      template: './src/index.html'
     })
   ]
 };
